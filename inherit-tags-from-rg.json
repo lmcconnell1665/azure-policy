@@ -1,0 +1,171 @@
+{
+    "mode": "Indexed",
+    "policyRule": {
+        "if": {
+            "anyOf": [
+                {
+                    "allOf": [
+                        {
+                            "field": "[concat('tags[', parameters('tagName1'), ']')]",
+                            "notEquals": "[ressourceGroup().tags[parameters('tagName1')]]"
+                        },
+                        {
+                            "value": "[resourceGroup().tags[parameters('tagName1')]]",
+                            "notEquals": ""
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "field": "[concat('tags[', parameters('tagName2'), ']')]",
+                            "notEquals": "[resourceGroup().tags[parameters('tagName2')]]"
+                        },
+                        {
+                            "value": "[resourceGroup().tags[parameters('tagName2')]]",
+                            "notEquals": ""
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "field": "[concat('tags[', parameters('tagName3'), ']')]",
+                            "notEquals": "[resourceGroup().tags[parameters('tagName3')]]"
+                        },
+                        {
+                            "value": "[resourceGroup().tags[parameters('tagName3')]]",
+                            "notEquals": ""
+                        }
+                    ]
+                },
+                {
+                    "allOf":[
+                        {
+                            "field": "[concat('tags[', parameters('tagName4'), ']')]",
+                            "notEquals": "[resourceGroup().tags[parameters('tagName4')]]"
+                        },
+                        {
+                            "value": "[resourceGroup().tags[parameters('tagName4')]]",
+                            "notEquals": ""
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "field": "[concat('tags[', parameters('tagName5'), ']')]",
+                            "notEquals": "[resourceGroup().tags[parameters('tagName5')]]"
+                        },
+                        {
+                            "value": "[resourceGroup().tags[parameters('tagName5')]]",
+                            "notEquals": ""
+                        }
+                    ]
+                },
+                {   
+                    "allOf": [
+                        {
+                            "field": "[concat('tags[', parameters('tagName6'), ']')]",
+                            "notEquals": "[resourceGroup().tags[parameters('tagName6')]]"
+                        },
+                        {
+                            "value": "[resourceGroup().tags[parameters('tagName6')]]",
+                            "notEquals": ""
+                        }
+                    ]
+                 }
+            ]
+        },
+        "then": {
+            "effect": "modify",
+            "details": {
+                "roleDefinitionIds": [
+                    "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+                ],
+                "operations": [
+                    {
+                        "operation": "addOrReplace",
+                        "field": "[concat('tags[', parameters('tagName1'), ']')]",
+                        "value": "[resourceGroup().tags[parameters('tagName1')]]"
+                    },
+                    {
+                        "operation": "addOrReplace",
+                        "field": "[concat('tags[', parameters('tagName2'), ']')]",
+                        "value": "[resourceGroup().tags[parameters('tagName2')]]"
+                    },
+                    {
+                        "operation": "addOrReplace",
+                        "field": "[concat('tags[', parameters('tagName3'), ']')]",
+                        "value": "[resourceGroup().tags[parameters('tagName3')]]"
+                    },
+                    {
+                        "operation": "addOrReplace",
+                        "field": "[concat('tags[', parameters('tagName4'), ']')]",
+                        "value": "[resourceGroup().tags[parameters('tagName4')]]"
+                    },
+                    {
+                        "operation": "addOrReplace",
+                        "field": "[concat('tags[', parameters('tagName5'), ']')]",
+                        "value": "[resourceGroup().tags[parameters('tagName5')]]"
+                    },
+                    {
+                        "operation": "addOrReplace",
+                        "field": "[concat('tags[', parameters('tagName6'), ']')]",
+                        "value": "[resourceGroup().tags[parameters('tagName6')]]"
+                    }
+                ]
+            }
+        }
+    },
+    "parameters": {
+        "tagName1": {
+            "type": "String",
+            "metadata": {
+                "displayName": "tagName1",
+                "description": "First tag to inherit"
+            },
+            "defaultValue": "environment"
+        },
+        "tagName2": {
+            "type": "String",
+            "metadata": {
+                "displayName": "tagName2",
+                "description": "Second tag to inherit"
+            },
+            "defaultValue" : "cost-center"
+        },
+        "tagName3": {
+            "type": "String",
+            "metadata": {
+                "displayName": "tagName3",
+                "description": "Third tag to inherit"
+            },
+            "defaultValue": "organizational-owner"
+        },
+        "tagName4": {
+            "type": "String",
+            "metadata": {
+                "displayName": "tagName4",
+                "description": "Fourth tag to inherit"
+            },
+            "defaultValue": "workload-owner"
+        },
+        "tagName5": {
+            "type": "String",
+            "metadata": {
+                "displayName": "tagName5",
+                "description": "fifth tag to inherit"
+            },
+            "defaultValue": "workload-infra-owner"
+        },
+        "tagName6": {
+            "type": "String",
+            "metadata": {
+                "displayName": "tagName6",
+                "description": "sixth tag to inherit"
+            },
+            "defaultValue": "data-classification"
+        }
+    }
+}
