@@ -1,55 +1,63 @@
 {
-    "mode": "Indexed",
+    "mode": "All",
     "policyRule": {
         "if": {
-            "anyOf": [
+            "allOf": [
                 {
-                    "field": "[concat('tags[', parameters('tagName1'),  ']')]",
-                    "exists": "false"
+                    "field": "type",
+                    "equals": "Microsoft.Resources/subscriptions/resourceGroups"
                 },
                 {
-                    "field": "[concat('tags[', parameters('tagName2'),  ']')]",
-                    "exists": "false"
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName3'),  ']')]",
-                    "exists": "false"
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName4'),  ']')]",
-                    "exists": "false"
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName5'),  ']')]",
-                    "exists": "false"
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName6'),  ']')]",
-                    "exists": "false"
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName1'),  ']')]",
-                    "equals": ""
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName2'),  ']')]",
-                    "equals": ""
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName3'),  ']')]",
-                    "equals": ""
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName4'),  ']')]",
-                    "equals": ""
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName5'),  ']')]",
-                    "equals": ""
-                },
-                {
-                    "field": "[concat('tags[', parameters('tagName6'),  ']')]",
-                    "equals": ""
+                    "anyOf": [
+                        {
+                            "field": "[concat('tags[', parameters('tagName1'),  ']')]",
+                            "exists": "false"
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName2'),  ']')]",
+                            "exists": "false"
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName3'),  ']')]",
+                            "exists": "false"
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName4'),  ']')]",
+                            "exists": "false"
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName5'),  ']')]",
+                            "exists": "false"
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName6'),  ']')]",
+                            "exists": "false"
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName1'),  ']')]",
+                            "equals": ""
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName2'),  ']')]",
+                            "equals": ""
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName3'),  ']')]",
+                            "equals": ""
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName4'),  ']')]",
+                            "equals": ""
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName5'),  ']')]",
+                            "equals": ""
+                        },
+                        {
+                            "field": "[concat('tags[', parameters('tagName6'),  ']')]",
+                            "equals": ""
+                        }
+                    ]
                 }
             ]
         },
