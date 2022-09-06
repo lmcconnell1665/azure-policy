@@ -14,47 +14,7 @@
                             "exists": "false"
                         },
                         {
-                            "field": "[concat('tags[', parameters('tagName2'),  ']')]",
-                            "exists": "false"
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName3'),  ']')]",
-                            "exists": "false"
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName4'),  ']')]",
-                            "exists": "false"
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName5'),  ']')]",
-                            "exists": "false"
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName6'),  ']')]",
-                            "exists": "false"
-                        },
-                        {
                             "field": "[concat('tags[', parameters('tagName1'),  ']')]",
-                            "equals": ""
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName2'),  ']')]",
-                            "equals": ""
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName3'),  ']')]",
-                            "equals": ""
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName4'),  ']')]",
-                            "equals": ""
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName5'),  ']')]",
-                            "equals": ""
-                        },
-                        {
-                            "field": "[concat('tags[', parameters('tagName6'),  ']')]",
                             "equals": ""
                         }
                     ]
@@ -69,50 +29,10 @@
         "tagName1": {
             "type": "String",
             "metadata": {
-                "displayName": "environment",
-                "description": "Application environment identification, such as 'prd' | 'dev' | 'tst' | 'stg' | 'qa' | 'azp'"
-            },
-            "defaultValue": "environment"
-        },
-        "tagName2": {
-            "type": "String",
-            "metadata": {
-                "displayName": "cost-center",
-                "description": "Department Identifier, can be used to allocate costs, such as 'LB-1450' | 'EP-1100'"
-            },
-            "defaultValue": "cost-center"
-        },
-        "tagName3": {
-            "type": "String",
-            "metadata": {
                 "displayName": "organizational-owner",
-                "description": "Organizational BU that owns workload /resorurces, such as 'biz unit 1' | 'biz unit 2'"
+                "description": "Cost center of the resource group such as 'Audit' | 'Tax' | 'Data Insights' | 'W-Squared'"
             },
             "defaultValue": "organizational-owner"
-        },
-        "tagName4": {
-            "type": "String",
-            "metadata": {
-                "displayName": "workload-owner",
-                "description": "Workload / app owner contact, as an email address"
-            },
-            "defaultValue": "workload-owner"
-        },
-        "tagName5": {
-            "type": "String",
-            "metadata": {
-                "displayName": "workload-infra-owner",
-                "description": "Workload / app infra owner contact, as an email address"
-            },
-            "defaultValue": "workload-infra-owner"
-        },
-        "tagName6": {
-            "type": "String",
-            "metadata": {
-                "displayName": "data-classification",
-                "description": "Resource data classification label, such as ''confidential' | 'restricted' | 'internal' | 'public'"
-            },
-            "defaultValue": "data-classification"
         }
     }
 }
